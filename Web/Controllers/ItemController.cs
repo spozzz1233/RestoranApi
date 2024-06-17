@@ -3,8 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Web.Data;
-using Web.DataAccess;
 using Web.Models;
 
 namespace Web.Controllers
@@ -27,7 +25,7 @@ namespace Web.Controllers
             return await _context.items.ToListAsync();
         }
 
-        // GET: api/Items/5
+        // GET: api/Items/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<items>> GetItem(int id)
         {
@@ -81,7 +79,7 @@ namespace Web.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Items/5
+        // DELETE: api/Items/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteItem(int id)
         {

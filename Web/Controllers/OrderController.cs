@@ -3,8 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Web.Data;
-using Web.DataAccess;
 using Web.Models;
 
 namespace Web.Controllers
@@ -27,7 +25,7 @@ namespace Web.Controllers
             return await _context.Orders.ToListAsync();
         }
 
-        // GET: api/Orders/5
+        // GET: api/Orders/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<Order>> GetOrder(int id)
         {
@@ -51,7 +49,7 @@ namespace Web.Controllers
             return CreatedAtAction("GetOrder", new { id = order.Id }, order);
         }
 
-        // PUT: api/Orders/5
+        // PUT: api/Orders/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> PutOrder(int id, Order order)
         {

@@ -12,5 +12,8 @@ namespace Web.Models
         public string description { get; set; }
         [Required]
         public decimal Price { get; set; }
+        [Required]
+        public string Image { get; set; }
+
     }
 }

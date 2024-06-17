@@ -13,7 +13,7 @@ namespace Web.DataAccess
             builder.Property(x => x.ItemName).HasColumnName("item_name").HasMaxLength(50).IsRequired();
             builder.Property(x => x.description).HasColumnName("description").HasMaxLength(50).IsRequired();
             builder.Property(x => x.Price).HasColumnName("price").IsRequired();
-
+            builder.Property(x => x.Image).HasColumnName("image").IsRequired();
             builder.ToTable("items", "public");
         }
     }

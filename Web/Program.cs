@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using Web.Data;
+using Web.Models;
 using DbContext = Microsoft.EntityFrameworkCore.DbContext;
 
 var builder = WebApplication.CreateBuilder(args);

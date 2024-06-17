@@ -3,8 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Web.Data;
-using Web.DataAccess;
 using Web.Models;
 
 namespace Web.Controllers
@@ -27,7 +25,7 @@ namespace Web.Controllers
             return await _context.Customers.ToListAsync();
         }
 
-        // GET: api/Customers/5
+        // GET: api/Customers/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<Customers>> GetCustomers(int id)
         {

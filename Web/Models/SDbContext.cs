@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Web.DataAccess;
-using Web.Models;
 
-namespace Web.Data
+namespace Web.Models
 {
     public class SDbContext : DbContext
     {
